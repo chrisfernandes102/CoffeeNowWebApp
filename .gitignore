@@ -1,5 +1,7 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
+package-lock.json
+
 # compiled output
 /dist/
 /tmp/
@@ -18,7 +20,6 @@
 /npm-debug.log*
 /testem.log
 /yarn-error.log
-package-lock.json
 
 # ember-try
 /.node_modules.ember-try/
