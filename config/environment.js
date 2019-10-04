@@ -23,6 +23,18 @@ module.exports = function(environment) {
     }
   };
 
+  ENV['ember-google-maps'] = {
+    key: 'AIzaSyDFJCYig4X6zrsOsGjiCp9OK1zaPkMEids', // Using .env files in this example
+    language: 'en',
+    region: 'GB',
+    protocol: 'https',
+    version: '3.37',
+    libraries: ['geometry', 'places'], // Optional libraries
+    // client: undefined,
+    // channel: undefined,
+    // baseUrl: '//maps.googleapis.com/maps/api/js'
+  }
+
   if (environment === 'development') {
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
