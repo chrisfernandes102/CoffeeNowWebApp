@@ -3,10 +3,28 @@ import { computed } from '@ember/object';
 
 export default Controller.extend({
 
+    /**
+     * The title of this application.
+     * @property title
+     * @type {String}
+     * @default '{{ coffeeNow }}'
+     */
     title: '{{ coffeeNow }}',
 
+    /**
+     * The current users latitude.
+     * @property longitude
+     * @type {String}
+     * @default London
+     */
     latitude: '51.508530',
 
+    /**
+     * The current users longitude.
+     * @property longitude
+     * @type {String}
+     * @default London
+     */
     longitude: '-0.076132',
 
     /**
