@@ -4,11 +4,19 @@
   <span class="flex"></span>
 </header>
 
-{{g-map lat="51.508530" lng="-0.076132"
+{{#g-map lat=latitude lng=longitude
     zoom=12
     styles=darkStyle
     minZoom=10
     panControl=false
     streetViewControl=false}}
+  {{g.circle lat=latitude lng=longitude 
+      radius=1000
+      fillColor="green"
+      fillOpacity=0.3
+      strokeColor="darkgreen"
+      strokeOpacity=0.5
+      strokeWeight=1}}
+{{/g-map}}
 
 {{outlet}}

@@ -4,12 +4,47 @@ import { computed } from '@ember/object';
 export default Controller.extend({
 
     title: '{{ coffeeNow }}',
+
+    latitude: '51.508530',
+
+    longitude: '-0.076132',
+
+    /**
+     * Ember Hook called upon entering the controller.
+     * @method init
+     */
+    init: function() {
+        this._super(...arguments);
+
+        var options = {
+            enableHighAccuracy: true,
+            timeout: 5000,
+            maximumAge: 0
+        };
+
+        function error(err) {
+            return `ERROR(${err.code}): ${err.message}`;
+        }
+
+        if ('geolocation' in navigator) {
+
+            navigator.geolocation.getCurrentPosition((position) => {
+
+                // Set Current location upon entering the route.
+                this.setProperties({
+                    latitude: position.coords.latitude,
+                    longitude: position.coords.longitude,
+                });
+            }, error, options);
+        }
+    },
+
     /**
      * Return options for DarkMode for the google maps api.
      * @method darkStyle
      * @return {Array}
      */
-    darkStyle: computed(function() {
+    darkStyle: computed(function () {
         return [
             {
                 'featureType': 'water',
