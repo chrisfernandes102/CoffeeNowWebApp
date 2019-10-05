@@ -1,5 +1,14 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+{{!-- Testing out Google Maps Library--}}
+<header>
+  <h1 class="coffee">{{title}}</h1>
+  <span class="flex"></span>
+</header>
+
+{{g-map lat="51.508530" lng="-0.076132"
+    zoom=12
+    styles=darkStyle
+    minZoom=10
+    panControl=false
+    streetViewControl=false}}
 
 {{outlet}}

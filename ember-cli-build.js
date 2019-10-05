@@ -5,6 +5,17 @@ const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
     // Add options here
+
+    // This will create the ember maps option.
+    'ember-google-maps': {
+        only: ['marker', 'info-window']
+        // except: ['overlay']
+    },
+
+    sassOptions: {
+        extension: 'scss'
+    },
+    
   });
 
   // Use `app.import` to add additional libraries to the generated
