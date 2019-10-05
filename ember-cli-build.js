@@ -10,7 +10,12 @@ module.exports = function(defaults) {
     'ember-google-maps': {
         only: ['marker', 'info-window']
         // except: ['overlay']
-    }
+    },
+
+    sassOptions: {
+        extension: 'scss'
+    },
+    
   });
 
   // Use `app.import` to add additional libraries to the generated

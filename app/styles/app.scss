@@ -1,0 +1,46 @@
+@import 'ember-paper';
+
+.ember-google-map {
+    width: 1000px;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    border-radius: 10px;
+    box-shadow: 0 15px 35px rgba(50,50,93,.05), 0 5px 15px rgba(0,0,0,.07);
+}
+
+.coffee {
+    font-family: Pacifico,cursive;
+    font-size: 1.2em;
+    transition-delay: color 1s; /* delays for 1 second */
+    -webkit-transition: color 1s; /* For Safari 3.1 to 6.0 */
+    text-shadow: 0 15px 35px rgba(50,50,93,.05), 0 5px 15px rgba(0,0,0,.07);
+
+    &:hover {
+        color: #6e4e36;
+    }
+
+    display: inline-block;
+    padding-top: .29125rem;
+    padding-bottom: .29125rem;
+    margin-right: 1rem;
+    font-size: 2.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+    margin-left: 5%;
+}
+
+$primary: 'grey';
+$secondary: #fffbf7;
+
+body {
+    margin: 0;
+    font-family: "Noto Sans","Open Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.67;
+    color: #545677;
+    text-align: left;
+    background-color: $secondary;
+}
