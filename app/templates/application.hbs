@@ -4,6 +4,12 @@
   <span class="flex"></span>
 </header>
 
+<div class="searchBar">
+  <input id="zipCode" type=”text” placeholder="Enter ZIP Code">
+  <button id="zipButton" {{action SearchTextField}}>Search! </button>
+</div>
+
+
 {{!-- Initial Map View with --}}
 {{#g-map lat=latitude lng=longitude zoom=12 styles=darkStyle as |g|}}
   {{g.marker

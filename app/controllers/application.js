@@ -15,17 +15,17 @@ export default Controller.extend({
      * The current users latitude.
      * @property longitude
      * @type {String}
-     * @default London
+     * @default Riverside
      */
-    latitude: '51.508530',
+    latitude: '33.954959',
 
     /**
      * The current users longitude.
      * @property longitude
      * @type {String}
-     * @default London
+     * @default Riverside
      */
-    longitude: '-0.076132',
+    longitude: '-117.328993',
 
     /**
      * Ember Hook called upon entering the controller.
@@ -56,6 +56,18 @@ export default Controller.extend({
             }, error, options);
         }
     },
+
+    /**
+     * Searches user input
+     * @method SearchTextField
+     */
+    SearchTextField: function () {
+        var zipCode = document.getElementById("zipCode").value;
+
+
+    },
+
+
 
     /**
      * Return options for DarkMode for the google maps api.
