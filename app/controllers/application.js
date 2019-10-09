@@ -1,5 +1,6 @@
 import Controller from '@ember/controller';
 import { computed } from '@ember/object';
+import ENV from "coffee-now-web-app/config/environment";
 
 export default Controller.extend({
 
@@ -64,6 +65,11 @@ export default Controller.extend({
     SearchTextField: function () {
         var zipCode = document.getElementById("zipCode").value;
 
+        //ENV['ember-google-maps'].key
+        var request = new XMLHttpRequest();
+
+        var url = 'https://maps.googleapis.com/maps/api/geocode/json?address=' + String(zipCode) + '&key=' + ENV['ember-google-maps'].key;
+        request.open('GET', url, true);
 
     },
 
